@@ -33,20 +33,17 @@ fun nok_to_currency(nok, currency):
     "Ugyldig valuta. Velg enten 'euro' eller 'usd'."
   end
 Oppgave 2)
-circle-red = circle(30,"outline", "red")
-circle-yellow = circle(30, "outline", "yellow")
-circle-black = circle(30, "outline" , "black")
-circle-blue = circle(30, "outline" , "blue")
-circle-green = circle(30, "outline" , "green")
-circle-white = circle(30, "outline" ,  "white")
-background = empty-scene(200,100)
-scene1= put-image(circle-yellow, 50, 40, background)
-put-image(circle-blue, 30, 80, scene1)
+circle-red = circle(50,"outline", "red")
+circle-yellow = circle(50, "outline", "yellow")
+circle-black = circle(50, "outline" , "black")
+circle-blue = circle(50, "outline" , "blue")
+circle-green = circle(50, "outline" , "green")
+circle-white = circle(50, "outline" ,  "white")
 
-background2 = empty-scene(200,100)
-scene2= put-image(circle-black, 80, 60, background)
-put-image(circle-green, 110, 30, scene2)
+top-circle = beside(circle-blue, beside(circle-black, circle-red))
+bottom-circle = beside(circle-yellow, circle-green)
 
-background3 = empty-scene(200,100)
-scene3= put-image(circle-red, 150, 60, background)
-put-image(circle-white, 110, 30, scene3) 
+background = empty-scene(400,200)
+top-circle
+scene-1 = put-image(top-circle, 200, 135, background)
+put-image(bottom-circle, 200, 70, scene-1)
