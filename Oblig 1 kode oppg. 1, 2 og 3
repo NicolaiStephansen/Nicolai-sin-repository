@@ -63,3 +63,37 @@ background = empty-scene(400,200)
 top-circle
 scene-1 = put-image(top-circle, 200, 135, background)
 put-image(bottom-circle, 200, 70, scene-1)
+
+
+Oppgave 3)
+include shared-gdrive("dcic-2021", "1wyQZj_L0qqV9Ekgr9au6RX2iqt2Ga8Ep")
+
+# Oppretter tabellen med persondata
+minTabell = table: 
+  firstName :: String, lastName :: String, email :: String, gender :: String, IP :: String, age :: Number
+  row: "Christel", "Litherland", "clitherland0@msu.edu", "Non-binary", "168.192.122.105", 25
+  row: "Veda", "Seiller", "vseiller1@php.net", "Non-binary", "22.64.141.244", 31
+  row: "Adham", "Wynch", "awynch2@dailymotion.com", "Male", "199.126.171.185", 65
+  row: "York", "Andover", "yandover3@ezinearticles.com", "Male", "234.146.76.74", 86
+  row: "Benn", "Drawmer", "bdrawmer4@princeton.edu", "Male", "178.16.235.24", 45
+  row: "Delila", "Tackes", "dtackes5@newsvine.com", "Female", "113.62.228.25", 22
+  row: "Myrtia", "Eary", "meary6@businessweek.com", "Female", "151.141.133.11", 68
+  row: "Veronika", "Berget", "vberget7@amazonaws.com", "Polygender", "252.198.173.108", 80
+  row: "Rivi", "Locke", "rlocke8@exblog.jp", "Female", "109.75.212.166", 51
+  row: "Aretha", "Marconi", "amarconi9@gov.uk", "Female", "232.95.177.135", 86
+end 
+
+# Funksjon for å filtrere personer mellom 30 og 80 år
+fun filtrer-alder(table): 
+  filter-with(table, lam(row): (row["age"] <= 80) and (row["age"] >= 30) end)
+end
+
+
+
+# Filtrere og lager ny kolonne
+filtered-table = filtrer-alder(minTabell)
+info-table = (filtered-table)
+final-table = (info-table)
+
+# Viser resultatet
+display(final-table)
