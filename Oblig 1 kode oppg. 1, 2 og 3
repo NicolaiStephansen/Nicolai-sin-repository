@@ -47,3 +47,19 @@ background = empty-scene(400,200)
 top-circle
 scene-1 = put-image(top-circle, 200, 135, background)
 put-image(bottom-circle, 200, 70, scene-1)
+
+Monokromt olympisk flagg:
+circle-red = circle(50,"outline", "black")
+circle-yellow = circle(50, "outline", "black")
+circle-black = circle(50, "outline" , "black")
+circle-blue = circle(50, "outline" , "black")
+circle-green = circle(50, "outline" , "black")
+circle-white = circle(50, "outline" ,  "black")
+
+top-circle = beside(circle-blue, beside(circle-black, circle-red))
+bottom-circle = beside(circle-yellow, circle-green)
+
+background = empty-scene(400,200)
+top-circle
+scene-1 = put-image(top-circle, 200, 135, background)
+put-image(bottom-circle, 200, 70, scene-1)
